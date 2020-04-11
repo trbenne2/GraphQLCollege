@@ -1,0 +1,22 @@
+type Pin {
+  title: String!
+  link: String!
+  image: String!
+  id: String!
+  user_id: String!
+}
+input PinInput {
+  title: String!
+  link: String!
+  image: String!
+}
+type Query {
+  pins: [Pin]
+  pinById(id: String!): Pin
+}
+type Mutation {
+  addPin(pin: PinInput!): Pin
+}
+type Subscription {
+  pinAdded: Pin
+}

@@ -1,0 +1,3 @@
+# import * from "authentication/schema.graphql"
+# import * from "pins/schema.graphql"
+# import * from "search/schema.graphql"

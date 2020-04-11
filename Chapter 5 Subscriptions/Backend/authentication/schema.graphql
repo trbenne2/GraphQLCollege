@@ -1,0 +1,23 @@
+interface Person {
+  id: String!
+  email: String!
+  pins: [Pin]
+}
+type User implements Person {
+  id: String!
+  email: String!
+  pins: [Pin]
+}
+type Admin implements Person {
+  id: String!
+  email: String!
+  pins: [Pin]
+}
+type Query {
+  users: [User]
+  me: User
+}
+type Mutation {
+  sendShortLivedToken(email: String!): Boolean
+  createLongLivedToken(token: String!): String
+}
